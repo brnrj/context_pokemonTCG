@@ -14,6 +14,7 @@ function Header() {
     );
     const poke = await data.json();
     setPokemon([poke]);
+    setInput('')
   }
   return (
     <header>

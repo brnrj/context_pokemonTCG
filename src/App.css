@@ -1,9 +1,9 @@
 .App {
-  background-color: aqua;
+  background-color:rgb(235, 191, 70);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: 1000px;
   flex-direction: column;
 }
 
@@ -34,4 +34,16 @@ header button {
 
 .PokeCard {
   margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.PokeCard div {
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
