@@ -1,17 +1,15 @@
+body {
+  background-color: #323031;
+}
 .App {
-  background-color:rgb(235, 191, 70);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1000px;
   flex-direction: column;
 }
 
-.App h1 {
-  text-align: center;
-}
-
 header {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,21 +17,29 @@ header {
 }
 
 header img {
-  width: 400px;
-  height: 200px;
+  width: 300px;
+  height: 150px;
   padding-bottom: 10px;
 }
 
 header input {
-  margin-bottom: 5px;
+  height: 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #DB3A34;
+  color: #323031;
 }
 
 header button {
   width: 100px;
+  height: 25px;
+  background-color: #084C61;
+  color: #FFC857;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .PokeCard {
-  margin: 20px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -41,9 +47,64 @@ header button {
 }
 
 .PokeCard div {
+  padding: 10px;
   margin: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  border-radius: 10px;
+}
+
+.PokeCard p {
+  font-size: x-large;
+  color: #FFC857;
+}
+
+.Grass {
+  background-color: green;
+}
+
+.Fire {
+  background-color: red;
+}
+
+.Water {
+  background-color: blue;
+}
+
+.Lightning {
+  background-color: yellow;
+}
+
+.Psychic {
+  background-color: purple;
+}
+
+.Fighting {
+  background-color: brown;
+}
+
+.Darkness {
+  background-color: black;
+}
+
+.Metal {
+  background-color: silver;
+}
+
+.Dragon {
+  background-color: gold;
+}
+
+.Fairy {
+  background-color: pink;
+}
+
+.Colorless {
+  background-color: white;
+}
+
+.Trainer {
+  background-color: yellowgreen;
 }

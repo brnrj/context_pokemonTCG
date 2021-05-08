@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import PokeContext from '../context/PokeContext';
 
 function PokeCard() {
-  const { pokemon } = useContext(PokeContext);
+  const { pokemon, pokeName } = useContext(PokeContext);
   const [ data , setData ] = useState([])
   useEffect(() => {
     if(pokemon.length) {
@@ -13,12 +13,11 @@ function PokeCard() {
   return (
     <div className="PokeCard">
       {data.length ? data.map((item, index) => (
-            <div key={index} className="card">
-              <h3 className="card-title" key={item.id}>{item.name}</h3>
+            <div key={index}  className={item.types ? item.types[0] : 'Trainer'}>
               <img src={item.imageUrl} alt={item.name}/>
-              <p className="card-type" key={item.number}>{item.types}</p>
+              {/* <p className="card-type" key={item.number}>{item.types}</p> */}
             </div>
-              )) : 'Escolha seu Pokémon'}
+              )) : <p>Escolha seu Pokémon</p>}
     </div>
   );
 }
