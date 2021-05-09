@@ -1,3 +1,6 @@
+body {
+  background-color: #323031;
+}
 .App {
   display: flex;
   justify-content: center;
@@ -42,6 +45,7 @@ header h3 {
   color: #FFC857
 }
 .PokeCard {
+  background-color: #323031;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
