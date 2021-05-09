@@ -3,7 +3,9 @@ import PokeContext from '../context/PokeContext';
 import Logo from '../images/Logo.png';
 
 function Header() {
-  const { input, handleChange, handleClick, pokeName, loading } = useContext(PokeContext);
+  const { input, handleChange, handleClick, pokeName, loading } = useContext(
+    PokeContext
+  );
 
   return (
     <header>
