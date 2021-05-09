@@ -12,7 +12,7 @@ function Header() {
       <button onClick={() => handleClick(input)} type="button">
         Procurar
       </button>
-      <h3>{pokeName.toUpperCase()}</h3>
+      {pokeName && <h3>{pokeName.toUpperCase()}</h3>}
     </header>
   );
 }
