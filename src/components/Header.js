@@ -3,7 +3,7 @@ import PokeContext from '../context/PokeContext';
 import Logo from '../images/Logo.png';
 
 function Header() {
-  const { input, handleChange, handleClick } = useContext(PokeContext);
+  const { input, handleChange, handleClick, pokeName } = useContext(PokeContext);
 
   return (
     <header>
@@ -12,6 +12,7 @@ function Header() {
       <button onClick={() => handleClick(input)} type="button">
         Procurar
       </button>
+      <h3>{pokeName.toUpperCase()}</h3>
     </header>
   );
 }

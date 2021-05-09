@@ -39,6 +39,9 @@ header button {
   margin-bottom: 20px;
 }
 
+header h3 {
+  color: #FFC857
+}
 .PokeCard {
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import PokeContext from '../context/PokeContext';
 
 function PokeCard() {
-  const { pokemon, pokeName } = useContext(PokeContext);
+  const { pokemon } = useContext(PokeContext);
   const [ data , setData ] = useState([])
   useEffect(() => {
     if(pokemon.length) {
