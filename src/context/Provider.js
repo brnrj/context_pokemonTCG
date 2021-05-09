@@ -17,15 +17,15 @@ function Provider({ children }) {
   }
 
   useEffect(() => {
-    if(loading) {
+    if (loading) {
       fetch(`https://api.pokemontcg.io/v1/cards?name=${input}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setPokemon(data.cards);
-        setLoading(false);
+        .then((response) => response.json())
+        .then((data) => {
+          setPokemon(data.cards);
+          setLoading(false);
           setInput('');
-      });
-    }    
+        });
+    }
   }, [input, loading]);
 
   const context = {
