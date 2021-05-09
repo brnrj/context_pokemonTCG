@@ -21,10 +21,12 @@ header img {
 
 header input {
   height: 25px;
+  margin: 5px;
   margin-bottom: 15px;
   border-radius: 5px;
   background-color: #DB3A34;
   color: #323031;
+  border: 5px;
 }
 
 header button {
