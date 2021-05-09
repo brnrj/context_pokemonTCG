@@ -6,17 +6,21 @@ function Provider({ children }) {
   const [input, setInput] = useState('');
   const [pokeName, setPokeName] = useState();
   const [loading, setLoading] = useState(false);
-  const [fPokes, setFPokes] = useState([])
+  const [fPokes, setFPokes] = useState([]);
+
   function handleChange({ target }) {
     setInput(target.value);
   }
 
   function clearPokemonNames(pokemon, pokeName) {
-    let name = pokeName.charAt(0).toUpperCase() + pokeName.slice(1, pokeName.length)
-    let data = pokemon.map((element) => {
-      let nameSplited = element.name.split(/[\s-]+/)
-      return nameSplited.includes(name) ? element : null
-    }).filter((value) => value !== null)
+    let name =
+      pokeName.charAt(0).toUpperCase() + pokeName.slice(1, pokeName.length);
+    let data = pokemon
+      .map((element) => {
+        let nameSplited = element.name.split(/[\s-]+/);
+        return nameSplited.includes(name) ? element : null;
+      })
+      .filter((value) => value !== null);
     setFPokes(data);
   }
 
@@ -24,7 +28,7 @@ function Provider({ children }) {
     setLoading(true);
     setPokeName(input);
   }
-  
+
   useEffect(() => {
     if (loading) {
       fetch(`https://api.pokemontcg.io/v1/cards?name=${input}`)
@@ -33,7 +37,7 @@ function Provider({ children }) {
           setPokemon(data.cards);
           setLoading(false);
           setInput('');
-          clearPokemonNames(pokemon, pokeName)
+          clearPokemonNames(pokemon, pokeName);
         });
     }
   }, [input, loading, pokemon, pokeName]);
@@ -47,7 +51,7 @@ function Provider({ children }) {
     handleClick,
     pokeName,
     loading,
-    fPokes
+    fPokes,
   };
   return (
     <PokeContext.Provider value={context}>{children}</PokeContext.Provider>
