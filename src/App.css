@@ -27,7 +27,7 @@ header input {
   margin: 5px;
   margin-bottom: 15px;
   border-radius: 5px;
-  background-color: #DB3A34;
+  background-color: #db3a34;
   color: #323031;
   border: 5px;
 }
@@ -35,14 +35,14 @@ header input {
 header button {
   width: 100px;
   height: 25px;
-  background-color: #084C61;
-  color: #FFC857;
+  background-color: #084c61;
+  color: #ffc857;
   border-radius: 5px;
   margin-bottom: 20px;
 }
 
 header h3 {
-  color: #FFC857
+  color: #ffc857;
 }
 .PokeCard {
   background-color: #323031;
@@ -64,7 +64,7 @@ header h3 {
 
 .PokeCard p {
   font-size: x-large;
-  color: #FFC857;
+  color: #ffc857;
 }
 
 .Grass {
